@@ -1,0 +1,18 @@
+GET http://localhost:3001/todos
+
+###
+
+POST http://localhost:3001/todo/new
+Content-Type: application/json
+
+{
+    "text": "woot woot"
+}
+
+###
+
+DELETE http://localhost:3001/todo/delete/put id here
+
+###
+
+PUT http://localhost:3001/todo/complete/6466c0475d81fbd6038cf4dd
