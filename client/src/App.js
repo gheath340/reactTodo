@@ -55,8 +55,10 @@ function App() {
   return ( 
     <>
     <div className="App flex flex-col items-center gap-6">
+      <h1 className='text-6xl'>To Do</h1>
       <ItemForm onSubmit={addTodo}/>
-      <h4 className='text-5xl'>Your Tasks</h4>
+      <h4 className='text-4xl'>Your Tasks</h4>
+      <div className='bg-white w-1/4 border'></div>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
     </div>
     </>
