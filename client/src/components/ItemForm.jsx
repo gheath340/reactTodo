@@ -12,17 +12,18 @@ export function ItemForm({ onSubmit }) {
         setNewTodo("")
     }
     return (
-        <form onSubmit={handleSubmit} className="">
+        <div className="">
             <div className="">
                 <label htmlFor="item">New Item</label>
-                <input 
+                <input
                     value={newTodo}
                     onChange={e => setNewTodo(e.target.value)}
                     type="text"
                     id="item"
+                    className="text-black"
                 />
             </div>
-            <button className="">Add</button>
-        </form>
+            <button className="" onClick={handleSubmit}>Add</button>
+        </div>
     )
 }

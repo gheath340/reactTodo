@@ -12,14 +12,13 @@ function App() {
     GetTodos()
   }, [])
 
-  const addTodo = async () => {
-    console.log(newTodo)
+  const addTodo = async newText => {
     const data = await fetch(API_BASE + "/todo/new", {
       method: "POST",
       headers: {
             "Content-Type": "application/json"
       },
-      body: JSON.stringify({text: newTodo})
+      body: JSON.stringify({text: newText})
     }).then(res => res.json())
 
     setTodos([...todos, data])
