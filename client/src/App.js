@@ -26,7 +26,11 @@ function App() {
   }
 
   const deleteTodo = async id => {
-    return
+    const data = await fetch(API_BASE + "/todo/delete/" + id, {
+      method: "DELETE"})
+      .then(res => res.json())
+
+    setTodos(todos => todos.filter(todo => todo._id !== data._id))
   }
 
   const GetTodos = () => {
