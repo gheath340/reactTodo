@@ -58,7 +58,7 @@ function App() {
       <h1 className='text-6xl'>To Do</h1>
       <ItemForm onSubmit={addTodo}/>
       <h4 className='text-4xl'>Your Tasks</h4>
-      <div className='bg-white w-1/4 border'></div>
+      <div className='bg-white w-1/2 border md:w-1/3 lg:w-1/4'></div>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
     </div>
     </>
