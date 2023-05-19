@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { ItemForm } from './components/ItemForm'
 
 const API_BASE = "http://localhost:3001"
 
@@ -31,6 +32,8 @@ function App() {
   }
 
   return ( 
+    <>
+    <ItemForm />
     <div className="App flex flex-col items-center gap-6">
       <h4 className='text-5xl'>Your Tasks</h4>
       <div className="flex flex-col gap-3 text-xl">
@@ -48,6 +51,7 @@ function App() {
       </div>
 
     </div>
+    </>
   )
 }
 
