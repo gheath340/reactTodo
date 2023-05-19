@@ -1,25 +1,23 @@
 import { useState } from "react"
 
-export function ItemForm() {
-    const [newItem, setNewItem] = useState("")
+export function ItemForm({ onSubmit }) {
+    const [newTodo, setNewTodo] = useState("")
 
     function handleSubmit(e) {
         e.preventDefault()
+        if(newTodo === "") return
 
-        // setTodos(currentTodos => {
-        //     return [...currentTodos, 
-        //     {id: crypto.randomUUID(), title: newItem, completed: false}]
-        // })
+        onSubmit(newTodo)
         
-        setNewItem("")
+        setNewTodo("")
     }
     return (
         <form onSubmit={handleSubmit} className="">
             <div className="">
                 <label htmlFor="item">New Item</label>
                 <input 
-                    value={newItem}
-                    onChange={e => setNewItem(e.target.value)}
+                    value={newTodo}
+                    onChange={e => setNewTodo(e.target.value)}
                     type="text"
                     id="item"
                 />
