@@ -31,14 +31,12 @@ function App() {
   }
 
   return ( 
-    <div className="App">
-      <h1>Hello world</h1>
-      <h4>Your Tasks</h4>
-      <div className="todos">
+    <div className="App flex flex-col items-center gap-6">
+      <h4 className='text-5xl'>Your Tasks</h4>
+      <div className="flex flex-col gap-3 text-xl">
         {todos.map(todo => (
-          <div className=
-          {"todo" + (todo.complete ? "is-complete" : "")
-          } key={todo._id} onClick={() => completeTodo(todo._id)}>
+          //instead just do if checkbox is checked call complete todo
+          <div className={"todo" + (todo.complete ? "-is-complete" : "")} key={todo._id} onClick={() => completeTodo(todo._id)}>
           <div className="checkBox">x</div>
 
           <div className="text">{ todo.text }</div>
